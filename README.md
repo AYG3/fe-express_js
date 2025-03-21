@@ -41,7 +41,8 @@ import GoogleButton from 'react-google-button';
 
 function App() {
   async function auth() {
-    const res = await fetch('http://localhost:3000/request', { method: 'POST' }); // Sends a POST request to the backend to initiate Google OAuth2 authentication
+    const res = await fetch('http://localhost:3000/request', { method: 'POST' }); 
+// Update the URL to match your backend route - Sends a POST request to initiate Google OAuth2 authentication
     const data = await res.json();
     window.location.href = data.url; // Redirects the user to Google's OAuth2 login page for authentication
   }
